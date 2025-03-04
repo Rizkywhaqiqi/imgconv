@@ -1,0 +1,176 @@
+/* Retro Windows 95 Theme */
+body {
+    background-color: #008080;
+    font-family: "MS Sans Serif", sans-serif;
+    color: black;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Window */
+.window {
+    background: silver;
+    border: 3px solid black;
+    width: 90%;
+    max-width: 500px;
+    margin: auto;
+    padding: 10px;
+    box-shadow: 5px 5px 0px black;
+}
+
+/* Title Bar */
+.title-bar {
+    background: navy;
+    color: white;
+    padding: 5px;
+    font-weight: bold;
+    text-align: left;
+}
+
+/* Retro Button */
+.retro-button {
+    background: silver;
+    border: 2px solid black;
+    padding: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 2px 2px 0px black;
+    margin: 5px auto;
+    width: 100%;
+    max-width: 200px;
+    display: block;
+}
+
+.retro-button:active {
+    box-shadow: none;
+}
+
+/* Drop Area (Menyesuaikan ukuran window) */
+#drop-area {
+    border: 3px dashed black;
+    background: white;
+    padding: 20px;
+    margin: 10px auto;
+    width: 100%;
+    max-width: 450px; /* Maksimum tetap dalam window */
+    min-height: 100px;
+}
+
+/* Image List */
+#sortable-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#sortable-list img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border: 2px solid black;
+}
+
+/* Retro Input */
+.retro-input {
+    background: white;
+    border: 2px inset gray;
+    padding: 5px;
+    font-size: 14px;
+    text-align: center;
+    width: 100px;
+}
+
+/* Preview Container */
+.preview-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* GIF Preview */
+#gif-preview {
+    max-width: 90%;
+    height: auto;
+    display: none;
+    border: 3px solid black;
+    box-shadow: 4px 4px 0px black;
+    margin: 20px auto;
+}
+
+/* Download Button */
+#download-btn {
+    display: none;
+    background-color: navy;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border: 2px solid black;
+    box-shadow: 4px 4px 0px black;
+    width: 100%;
+    max-width: 200px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+#download-btn:hover {
+    background-color: darkblue;
+    box-shadow: 2px 2px 0px black;
+}
+
+/* 🌟 Responsiveness */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .window {
+        width: 95%;
+    }
+
+    #drop-area {
+        width: 89%;
+        padding: 15px;
+    }
+
+    #sortable-list img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .retro-button {
+        width: 100%;
+    }
+
+    #gif-preview {
+        max-width: 90%;
+    }
+
+    #download-btn {
+        width: 90%;
+    }
+}
+
+/* Created By Window */
+.creator-box {
+    background: silver;
+    border: 3px solid black;
+    width: fit-content;
+    padding: 5px 15px;
+    margin: 20px auto;
+    box-shadow: 4px 4px 0px black;
+    text-align: center;
+}
+
+.creator-box a {
+    color: navy;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.creator-box a:hover {
+    text-decoration: underline;
+}

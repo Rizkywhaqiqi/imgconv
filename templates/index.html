@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIF Converter</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
+</head>
+<body>
+    <div class="window">
+        <div class="title-bar">
+            <span> GIF Converter</span>
+        </div>
+        <div class="content">
+            <form id="upload-form" action="/convert" method="post" enctype="multipart/form-data"><input type="file" id="file-input" name="images" multiple accept="image/png, image/jpeg, image/jpg, image/bmp" hidden>
+
+                <input type="file" id="file-input" name="images" multiple accept="image/png" hidden>
+                <button type="button" class="retro-button" onclick="document.getElementById('file-input').click()">📂 Pilih PNG File</button>
+
+                <!-- Drag & Drop Area -->
+                <div id="drop-area" ondrop="handleDrop(event)" ondragover="event.preventDefault()">
+                    <p>🖱️ Tarik & Taruh IMAGES di sini</p>
+                    <ul id="sortable-list"></ul>
+                </div>
+
+                <label for="duration">⏱️ Durasi frame (ms): </label>
+                <input type="number" name="duration" value="500" min="50" class="retro-input">
+
+                <input type="hidden" id="image-order" name="image_order">
+                <br><br>
+                <button type="submit" class="retro-button">🛠️ Convert ke GIF</button>
+            </form>
+
+            <div class="preview-container">
+                <h3>🖼️ Preview GIF:</h3>
+                <img id="gif-preview" style="max-width: 300px; display: none;">
+                <br>
+                <a id="download-btn" style="display: none;" download="output.gif">⬇️ Download GIF</a>
+            </div>
+        </div>
+    </div>
+   <!-- Created by Box -->
+<div class="creator-box">
+    <p>👤 Created by <a href="https://www.instagram.com/rizkywhaqiqi/" target="_blank">@rizkywhaqiqi</a></p>
+</div>
+
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
