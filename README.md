@@ -49,7 +49,7 @@ Jika kamu merasa proyek ini bermanfaat, dukung dengan donasi:
 
 atau melalui PayPal:
 
-[💰 Donasi via PayPal](https://paypal.me/rizkywahyuhaqiqi07)
+[💰 Donasi via PayPal](https://www.paypal.com/paypalme/rwhaqiqi)
 
 ---
 
