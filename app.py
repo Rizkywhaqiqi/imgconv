@@ -1,3 +1,4 @@
+import os
 import base64
 import io
 from flask import Flask, request, render_template, jsonify
@@ -36,4 +37,5 @@ def convert_to_gif():
     return jsonify({"gif_base64": gif_base64})
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 8000))
+    app.run(host="0.0.0.0", port=port)
