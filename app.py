@@ -1,14 +1,17 @@
 import os
 import base64
 import io
-from flask import Flask, request, render_template, jsonify
+from flask import Flask, request, render_template, jsonify, session
 from PIL import Image
 
 app = Flask(__name__)
+app.secret_key = "random_secret_key"  # Kunci rahasia untuk session
 
+# Simpan jumlah view dalam session
 @app.route("/")
 def index():
-    return render_template("index.html")
+    session["views"] = session.get("views", 0) + 1
+    return render_template("index.html", views=session["views"])
 
 @app.route("/convert", methods=["POST"])
 def convert_to_gif():
